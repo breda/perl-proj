@@ -9,7 +9,7 @@ use Encode 'encode';
 # ############## Perl Project ##############
 # ##########################################
 # This is the perl exam project. LIC.LIG — L2 — Section A
-# Project Members : BOUCHAALA Reda — 201300005606 — <bouchaala.reda@gmail.com>
+# Project Members : BOUCHAALA Reda — 201300005606 — <bouchaala.reda[at]gmail.com>
 #                   DJELOUEH Mohamed — 201300005133
 #                   BEDAR Abdellah — 201300005506
 #                   BOUKHARI Mohamed — 201200006613
@@ -96,7 +96,7 @@ foreach my $sorted_line(@sorted_lines) {
   
   if( $n =~ m/^\d+$/g && $f =~ m/^\d+$/g ) { # $n and $f must be numeric
     unless( $u eq '%' ){ # Fixes a small problem with '%'
-      print OUT "\t$n\t$f\t".fix_chars_in_word($u)."\n";
+      print OUT "\t$n\t". substr($f, 0, 10) ."\t".fix_chars_in_word($u)."\n";
     }
   }
 }
@@ -138,7 +138,7 @@ sub print_help_message {
 
 This is the script that was written for the Perl exam.
 
-Project Members : BOUCHAALA Reda \t 201300005606 \t <bouchaala.reda\@gmail.com>
+Project Members : BOUCHAALA Reda \t 201300005606 \t <bouchaala.reda[at]gmail.com>
                   DJELOUEH Mohamed \t 201300005133
                   BEDAR Abdellah \t 201300005506
                   BOUKHARI Mohamed \t 201200006613
